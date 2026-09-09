@@ -1,0 +1,75 @@
+.mascot { display: block; overflow: visible; }
+.mascot__body { transform-box: fill-box; transform-origin: 60px 108px; }
+.mascot__shell, .mascot__type-pill rect, .mascot__bubble rect, .mascot__reveal-bubble rect { fill: var(--c-white); stroke: var(--c-ink); stroke-width: 2.5; }
+.mascot__cheek { fill: var(--mascot-cheek, var(--c-cheek)); transition: fill 600ms ease; }
+.mascot__eye, .mascot__eyes path, .mascot__mouth, .mascot__sprout { fill: none; stroke: var(--c-ink); stroke-linecap: round; stroke-width: 2.5; }
+.mascot__eye, .mascot__dot, .mascot__mouth--fill { fill: var(--c-ink); stroke: none; }
+.mascot__mouth--round { fill: none; }
+.mascot__sprout { transform-origin: 60px 14px; }
+.mascot__q, .mascot__spark, .mascot__drop { fill: var(--c-primary); }
+.mascot__q, .mascot__type-pill text, .mascot__reveal-bubble text { font-family: var(--font); font-weight: 900; }
+.mascot__q { font-size: 26px; }
+.mascot__type-pill text, .mascot__reveal-bubble text { fill: var(--c-ink); font-size: 10px; }
+.mascot__cursor { fill: var(--c-ink); }
+.mascot__spark--one { transform-origin: 103px 31px; }
+.mascot__spark--two { transform-origin: 16px 38px; }
+
+/* 공포탐욕 무드 (scared·worried·greedy·ecstatic) — 색은 감싸는 쪽이 --mascot-mood로 정한다 */
+.mascot__sweat { fill: var(--c-down); }
+.mascot__sweat--two { animation-delay: 0.7s !important; }
+.mascot__cash { fill: var(--mascot-mood, var(--c-primary-deep)); font-family: var(--font); font-size: 17px; font-weight: 900; transform-box: fill-box; transform-origin: center; }
+.mascot__cash--big { font-size: 22px; }
+.mascot__tongue { fill: #ff7a8a; }
+.mascot__drool { fill: #bfe3ff; stroke: var(--c-ink); stroke-width: 1.2; opacity: 0; }
+.mascot__drool--small { transform-origin: 73px 86px; }
+.mascot__coin { opacity: 0; }
+.mascot__coin circle { fill: #f6c445; stroke: var(--c-ink); stroke-width: 1.5; }
+.mascot__coin text { fill: var(--c-ink); font-family: var(--font); font-size: 9px; font-weight: 900; }
+.mascot__coin--one { transform-origin: 102px 40px; }
+.mascot__coin--two { transform-origin: 18px 48px; }
+
+.mascot--idle .mascot__body { animation: bob 2.8s ease-in-out infinite; }
+.mascot--idle .mascot__eye { animation: blink 4s infinite; transform-origin: center; }
+.mascot--idle .mascot__eyes { animation: glance 7s ease-in-out infinite; }
+.mascot--typing .mascot__body { animation: lean 1.6s ease-in-out infinite; }
+.mascot--typing .mascot__eyes { animation: track 1.6s ease-in-out infinite; }
+.mascot--typing .mascot__sprout { animation: sproutwag 0.8s ease-in-out infinite; }
+.mascot--submit .mascot__body { animation: jump 0.6s cubic-bezier(0.4, 0, 0.2, 1) both; }
+.mascot--thinking .mascot__body { animation: tilt 2.4s ease-in-out infinite; }
+.mascot--thinking .mascot__eyes { animation: lookup 2.4s ease-in-out infinite; }
+.mascot--thinking .mascot__q { animation: qfloat 2.4s ease-out infinite; }
+.mascot--reveal .mascot__body { animation: pop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.mascot--reveal .mascot__reveal-bubble { animation: bubble 3s ease-out infinite; }
+.mascot--reveal .mascot__spark { animation: spark 3s ease-in-out infinite; }
+.mascot--reveal .mascot__spark--two { animation-delay: 0.3s; }
+.mascot--peek .mascot__body { animation: peek 4s ease-in-out infinite; }
+.mascot--peek .mascot__eyes { animation: lookdown 1.2s ease-in-out infinite; }
+.mascot--wink .mascot__body { animation: bob 2.8s ease-in-out infinite; }
+.mascot--wink .mascot__eye--wink-open { animation: winkA 3s infinite; }
+.mascot--wink .mascot__wink { animation: winkB 3s infinite; }
+.mascot--wink .mascot__cheek { animation: blush 3s infinite; }
+.mascot--oops .mascot__body { animation: droop 3s ease-in-out infinite; }
+.mascot--oops .mascot__drop { animation: sweat 2s ease-in infinite; }
+.mascot--scared .mascot__body { animation: shiver 0.14s linear infinite; }
+.mascot--scared .mascot__sprout { animation: shiver 0.14s linear infinite reverse; }
+.mascot--scared .mascot__sweat { animation: sweat 1.1s ease-in infinite; }
+.mascot--worried .mascot__body { animation: droop 3s ease-in-out infinite; }
+.mascot--worried .mascot__eyes { animation: glance 3s ease-in-out infinite; }
+.mascot--worried .mascot__sweat { animation: sweat 2s ease-in infinite; }
+.mascot--greedy .mascot__body { animation: bob 1.4s ease-in-out infinite; }
+.mascot--greedy .mascot__spark { animation: spark 2s ease-in-out infinite; }
+.mascot--greedy .mascot__cash { animation: cashpulse 1.4s ease-in-out infinite; }
+.mascot--greedy .mascot__drool--small { animation: drip 2.4s ease-in infinite; }
+.mascot--ecstatic .mascot__body { animation: jump 0.9s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+.mascot--ecstatic .mascot__spark { animation: spark 1.2s ease-in-out infinite; }
+.mascot--ecstatic .mascot__spark--two { animation-delay: 0.4s; }
+.mascot--ecstatic .mascot__cash { animation: cashspin 0.9s ease-in-out infinite; }
+.mascot--ecstatic .mascot__cash--late { animation-delay: 0.15s; }
+.mascot--ecstatic .mascot__drool { animation: drool 1.6s ease-in infinite; }
+.mascot--ecstatic .mascot__coin--one { animation: coin 1.5s ease-out infinite; }
+.mascot--ecstatic .mascot__coin--two { animation: coin 1.5s ease-out infinite 0.6s; }
+.mascot--ecstatic .mascot__cheek { animation: blush 1.2s infinite; }
+.mascot__dot--one { animation: dots 1.2s infinite 0s; }
+.mascot__dot--two { animation: dots 1.2s infinite 0.2s; }
+.mascot__dot--three { animation: dots 1.2s infinite 0.4s; }
+.mascot__cursor { animation: cursor 1s steps(1) infinite; }
